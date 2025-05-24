@@ -74,7 +74,7 @@ function generateTitlePage() {
     <html lang="ru">
     <head><meta charset="UTF-8"><title>Титульный лист</title></head>
     <body style="font-family: Arial; padding: 40px;">
-      <h2 style="text-align: center;">ФГАОУ ВЩ МГТУ "СТАНКИН"</h2>
+      <h2 style="text-align: center;">ФГАОУ ВО МГТУ "СТАНКИН"</h2>
       <h2 style="text-align: center;">МИНИСТЕРСТВО ОБРАЗОВАНИЯ</h2>
       <h3 style="text-align: center;">Кафедра: ${dept}</h3>
       <p style="text-align: center; margin-top: 100px;">Отчет по лабораторной работе №3</p>
