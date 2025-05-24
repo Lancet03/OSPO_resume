@@ -1,5 +1,5 @@
 // Анимация появления секций при прокрутке
-const sections = document.querySelectorAll("header, section");
+const sections = document.querySelectorAll("header, section, .project");
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {

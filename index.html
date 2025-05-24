@@ -104,11 +104,92 @@
         <button onclick="runProject3()">Ввести возраст</button>
         <p id="result3" class="project-result" style="display: none"></p>
       </div>
+
+      <!-- Калькулятор -->
+      <div class="project">
+        <h3>Калькулятор</h3>
+        <div
+          id="calcResult"
+          style="margin-top: 10px; padding: 10px; border-radius: 4px"
+        >
+          Результат: —
+        </div>
+        <input type="text" id="calcA" placeholder="Число A" />
+        <input type="text" id="calcB" placeholder="Число B" />
+
+        <div class="calc-keypad">
+          <span>Клавиатура:</span>
+          <div class="keypad-grid">
+            <button onclick="insertDigit('1')">1</button>
+            <button onclick="insertDigit('2')">2</button>
+            <button onclick="insertDigit('3')">3</button>
+            <button onclick="insertDigit('4')">4</button>
+            <button onclick="insertDigit('5')">5</button>
+            <button onclick="insertDigit('6')">6</button>
+            <button onclick="insertDigit('7')">7</button>
+            <button onclick="insertDigit('8')">8</button>
+            <button onclick="insertDigit('9')">9</button>
+            <button onclick="insertDigit('0')">0</button>
+            <select id="calcOp">
+              <option value="+">+</option>
+              <option value="-">-</option>
+              <option value="*">*</option>
+              <option value="/">/</option>
+            </select>
+            <button onclick="calculate()">=</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Индикатор -->
+      <div class="project">
+        <h3>Стрелочный индикатор</h3>
+        <input
+          type="range"
+          id="indicator"
+          min="0"
+          max="9"
+          value="0"
+          oninput="setIndicator(this.value)"
+        />
+        <div>
+          Клавиатура:
+          <button onclick="setIndicator(0)">0</button>
+          <button onclick="setIndicator(1)">1</button>
+          <button onclick="setIndicator(2)">2</button>
+          <button onclick="setIndicator(3)">3</button>
+          <button onclick="setIndicator(4)">4</button>
+          <button onclick="setIndicator(5)">5</button>
+          <button onclick="setIndicator(6)">6</button>
+          <button onclick="setIndicator(7)">7</button>
+          <button onclick="setIndicator(8)">8</button>
+          <button onclick="setIndicator(9)">9</button>
+        </div>
+      </div>
+
+      <!-- Генератор титульного листа -->
+      <div class="project" id="titlePageGenerator">
+        <h3>Генератор HTML титульного листа</h3>
+        <div class="row full-width">
+          <input type="text" id="titleDept" placeholder="Кафедра" />
+          <input type="text" id="titleGroup" placeholder="Группа" />
+        </div>
+        <div class="row full-width">
+          <input
+            type="text"
+            id="titleTeacher"
+            placeholder="ФИО преподавателя"
+          />
+          <input type="text" id="titleStudent" placeholder="ФИО студента" />
+        </div>
+
+        <button onclick="generateTitlePage()">Сгенерировать</button>
+      </div>
     </section>
 
     <section>
+      <h2>Интерактивное резюме</h2>
       <div id="survey">
-        <h2>Интерактивное резюме</h2>
         <form id="surveyForm">
           <label
             >Фамилия: <input type="text" id="surnameInput" required
@@ -155,14 +236,17 @@
             <textarea id="additionalText" rows="3"></textarea>
           </label>
 
-          <button
-            type="button"
-            id="complete-questionnaire"
-            onclick="submitSurvey()"
-          >
-            Заполнить анкету
-          </button>
-          <button type="button" onclick="check()">Проверить навыки</button>
+          <div class="row">
+            <button
+              type="button"
+              id="complete-questionnaire"
+              onclick="submitSurvey()"
+            >
+              Заполнить анкету
+            </button>
+            <button type="button" onclick="check()">Проверить навыки</button>
+          </div>
+
           <p id="checkResult"></p>
         </form>
       </div>
@@ -184,5 +268,6 @@
     </section>
 
     <script src="index.js"></script>
+    <script src="projects.js"></script>
   </body>
 </html>
