@@ -84,7 +84,7 @@
     <section class="projects">
       <h2>Мои проекты</h2>
 
-      <div class="project">
+      <div class="project card">
         <h3>Проект 1: Нахождение максимума двух чисел</h3>
         <input type="number" id="numA" placeholder="Введите a" />
         <input type="number" id="numB" placeholder="Введите b" />
@@ -92,21 +92,21 @@
         <p id="result1" class="project-result" style="display: none"></p>
       </div>
 
-      <div class="project">
+      <div class="project card">
         <h3>Проект 2: Присваивание переменной</h3>
         <input type="text" id="nameInput" placeholder="Введите имя" />
         <button onclick="runProject2()">Показать admin</button>
         <p id="result2" class="project-result" style="display: none"></p>
       </div>
 
-      <div class="project">
+      <div class="project card">
         <h3>Проект 3: Проверка возраста</h3>
         <button onclick="runProject3()">Ввести возраст</button>
         <p id="result3" class="project-result" style="display: none"></p>
       </div>
 
       <!-- Калькулятор -->
-      <div class="project">
+      <div class="project card">
         <h3>Калькулятор</h3>
         <div
           id="calcResult"
@@ -142,7 +142,7 @@
       </div>
 
       <!-- Индикатор -->
-      <div class="project">
+      <div class="project card">
         <h3>Стрелочный индикатор</h3>
         <input
           type="range"
@@ -168,7 +168,7 @@
       </div>
 
       <!-- Генератор титульного листа -->
-      <div class="project" id="titlePageGenerator">
+      <div class="project card" id="titlePageGenerator">
         <h3>Генератор HTML титульного листа</h3>
         <div class="row full-width">
           <input type="text" id="titleDept" placeholder="Кафедра" />
@@ -254,7 +254,7 @@
 
     <section id="contact">
       <h2>Связаться со мной</h2>
-      <form id="contactForm">
+      <form id="contactForm" class="card">
         <input type="text" id="name" placeholder="Имя" required />
         <input type="email" id="email" placeholder="Email" required />
         <textarea
