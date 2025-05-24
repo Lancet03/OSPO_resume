@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Резюме - Иван Иванов</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header id="home">
+      <h1>Иван Иванов</h1>
+      <h2>Веб-разработчик</h2>
+      <p>
+        Создаю современные и адаптивные сайты с чистым кодом и вниманием к
+        деталям.
+      </p>
+      <a class="btn" onclick="scrollToSection('contact')">Связаться со мной</a>
+      <a href="#" class="btn" onclick="downloadResume()">Скачать резюме</a>
+    </header>
+
+    <section class="experience">
+      <h2>Опыт работы</h2>
+      <div class="job">
+        <h3>Frontend-разработчик — ООО "ТехСофт"</h3>
+        <p><em>2021 — Настоящее время</em></p>
+        <p>
+          Разработка интерфейсов SPA, работа с REST API, оптимизация
+          производительности.
+        </p>
+      </div>
+      <div class="job">
+        <h3>Junior разработчик — Фриланс</h3>
+        <p><em>2019 — 2021</em></p>
+        <p>
+          Создание сайтов под заказ, верстка лендингов, настройка хостинга и
+          домена.
+        </p>
+      </div>
+    </section>
+
+    <section class="education">
+      <h2>Образование</h2>
+      <div class="school">
+        <h3>НИТУ "МИСиС"</h3>
+        <p><em>Бакалавр — Информационная безопасность, 2016–2020</em></p>
+      </div>
+      <div class="school">
+        <h3>Курс "Современный JavaScript" на Udemy</h3>
+        <p><em>2021</em></p>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2>Навыки</h2>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3 / Flexbox / Grid</li>
+        <li>JavaScript (ES6+)</li>
+        <li>Git</li>
+        <li>Responsive Design</li>
+        <li>Командная работа</li>
+        <li>Ответственность</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Связаться со мной</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Имя" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <textarea
+          id="message"
+          placeholder="Сообщение"
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit" class="btn">Отправить</button>
+      </form>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>

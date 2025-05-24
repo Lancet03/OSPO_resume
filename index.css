@@ -1,0 +1,115 @@
+/* Основные стили и сброс */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header,
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+header.visible,
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #007acc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+  transform: scale(1.05);
+}
+
+.experience,
+.education,
+.skills {
+  display: grid;
+  gap: 20px;
+}
+
+.job,
+.school {
+  background: #fff;
+  padding: 15px;
+  border-left: 4px solid #007acc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.job:hover,
+.school:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills li {
+  background: #eee;
+  padding: 5px 10px;
+  border-radius: 3px;
+  list-style: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: default;
+}
+
+.skills li:hover {
+  background-color: #d0e9ff;
+  transform: scale(1.05);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .skills ul {
+    flex-direction: column;
+  }
+}
