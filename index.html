@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Резюме - Иван Иванов</title>
+    <title>Резюме - Илья Ефремов</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <header id="home">
       <img src="/assets/img/tenor.gif" alt="Фото профиля" class="profile-img" />
-      <h1>Иван <span id="lastName">Иванов</span></h1>
+      <h1>Илья <span id="lastName">Ефремов</span></h1>
       <h2>Веб-разработчик</h2>
       <p>
         Создаю современные и адаптивные сайты с чистым кодом и вниманием к
@@ -28,10 +28,10 @@
 
         <div class="header-group">
           <button onclick="changeBackgroundColor()">Случайный фон</button>
-          <button class="btn" onclick="scrollToSection('contact')">
+          <button onclick="scrollToSection('contact')">
             Связаться со мной
           </button>
-          <button class="btn" onclick="downloadResume()">Скачать резюме</button>
+          <button onclick="downloadResume()">Скачать резюме</button>
         </div>
       </div>
     </header>
@@ -39,31 +39,33 @@
     <section class="experience">
       <h2>Опыт работы</h2>
       <div class="job">
-        <h3>Frontend-разработчик — ООО "ТехСофт"</h3>
-        <p><em>2021 — Настоящее время</em></p>
+        <h3>Frontend-разработчик</h3>
+        <p><em>2024 — Настоящее время</em></p>
         <p>
           Разработка интерфейсов SPA, работа с REST API, оптимизация
           производительности.
         </p>
       </div>
       <div class="job">
-        <h3>Junior разработчик — Фриланс</h3>
-        <p><em>2019 — 2021</em></p>
-        <p>
-          Создание сайтов под заказ, верстка лендингов, настройка хостинга и
-          домена.
-        </p>
+        <h3>Junior разработчик — Свои проекты</h3>
+        <p><em>2022 — Настоящее время</em></p>
+        <p>Создание сайтов, проектов на C++ и C#.</p>
       </div>
     </section>
 
     <section class="education">
       <h2>Образование</h2>
       <div class="school">
-        <h3>НИТУ "МИСиС"</h3>
-        <p><em>Бакалавр — Информационная безопасность, 2016–2020</em></p>
+        <h3>МГТУ "СТАНКИН"</h3>
+        <p>
+          <em
+            >Бакалавр — Автоматизация технологических процессов и производств,
+            2022 – Настоящее время</em
+          >
+        </p>
       </div>
       <div class="school">
-        <h3>Курс "Современный JavaScript" на Udemy</h3>
+        <h3>Курс по изучению "JavaScript", React, Vue</h3>
         <p><em>2021</em></p>
       </div>
     </section>
@@ -263,7 +265,7 @@
           rows="5"
           required
         ></textarea>
-        <button type="submit" class="btn">Отправить</button>
+        <button type="submit">Отправить</button>
       </form>
     </section>
 
