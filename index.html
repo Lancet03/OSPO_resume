@@ -8,14 +8,44 @@
   </head>
   <body>
     <header id="home">
-      <h1>Иван Иванов</h1>
+      <img
+        src="/assets/img/tenor.gif"
+        alt="Фото профиля"
+        class="profile-img"
+      />
+      <h1>Иван <span id="lastName">Иванов</span></h1>
       <h2>Веб-разработчик</h2>
       <p>
         Создаю современные и адаптивные сайты с чистым кодом и вниманием к
         деталям.
       </p>
-      <a class="btn" onclick="scrollToSection('contact')">Связаться со мной</a>
-      <a href="#" class="btn" onclick="downloadResume()">Скачать резюме</a>
+
+      <!-- <input type="text" id="newLastName" placeholder="Введите новую фамилию" />
+      <button onclick="changeLastName()">Изменить фамилию</button>
+      <button onclick="changeBackgroundColor()">Случайный фон</button>
+
+      <button class="btn" onclick="scrollToSection('contact')">
+        Связаться со мной
+      </button>
+      <button class="btn" onclick="downloadResume()">Скачать резюме</button> -->
+      <div class="header-controls">
+        <div class="header-group">
+          <input
+            type="text"
+            id="newLastName"
+            placeholder="Введите новую фамилию"
+          />
+          <button onclick="changeLastName()">Изменить фамилию</button>
+        </div>
+
+        <div class="header-group">
+          <button onclick="changeBackgroundColor()">Случайный фон</button>
+          <button class="btn" onclick="scrollToSection('contact')">
+            Связаться со мной
+          </button>
+          <button class="btn" onclick="downloadResume()">Скачать резюме</button>
+        </div>
+      </div>
     </header>
 
     <section class="experience">
@@ -63,6 +93,30 @@
       </ul>
     </section>
 
+    <section class="projects">
+      <h2>Мои проекты</h2>
+
+      <div class="project">
+        <h3>Проект 1: Нахождение максимума двух чисел</h3>
+        <input type="number" id="numA" placeholder="Введите a" />
+        <input type="number" id="numB" placeholder="Введите b" />
+        <button onclick="runProject1()">Найти максимум</button>
+        <p id="result1" class="project-result" style="display: none"></p>
+      </div>
+
+      <div class="project">
+        <h3>Проект 2: Присваивание переменной</h3>
+        <input type="text" id="nameInput" placeholder="Введите имя" />
+        <button onclick="runProject2()">Показать admin</button>
+        <p id="result2" class="project-result" style="display: none"></p>
+      </div>
+
+      <div class="project">
+        <h3>Проект 3: Проверка возраста</h3>
+        <button onclick="runProject3()">Ввести возраст</button>
+        <p id="result3" class="project-result" style="display: none"></p>
+      </div>
+    </section>
     <section id="contact">
       <h2>Связаться со мной</h2>
       <form id="contactForm">

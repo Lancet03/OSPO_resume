@@ -63,3 +63,91 @@ function downloadResume() {
       URL.revokeObjectURL(url);
     });
 }
+
+// Изменение фамилии
+function changeLastName() {
+  const input = document.getElementById("newLastName").value.trim();
+  if (input) {
+    document.getElementById("lastName").textContent = input;
+  }
+}
+
+// Случайный фон
+function changeBackgroundColor() {
+  document.body.style.backgroundColor = `hsl(${Math.floor(
+    Math.random() * 360
+  )}, 80%, 90%)`;
+}
+
+function runProject1() {
+  const a = parseFloat(document.getElementById("numA").value);
+  const b = parseFloat(document.getElementById("numB").value);
+  const result = document.getElementById("result1");
+  result.style.display = "block";
+  if (!isNaN(a) && !isNaN(b)) {
+    result.textContent = `Максимум: ${Math.max(a, b)}`;
+  } else {
+    result.textContent = "Пожалуйста, введите оба числа.";
+  }
+}
+
+function runProject2() {
+  const name = document.getElementById("nameInput").value.trim();
+  const result = document.getElementById("result2");
+  result.style.display = "block";
+  if (name) {
+    const admin = name;
+    result.textContent = `admin = ${admin}`;
+  } else {
+    result.textContent = "Пожалуйста, введите имя.";
+  }
+}
+
+function runProject3() {
+  let age;
+  const result = document.getElementById("result3");
+
+  while (true) {
+    age = prompt("Введите ваш возраст:");
+    if (age === null) {
+      alert("Пожалуйста, введите возраст.");
+      continue;
+    }
+
+    age = age.trim();
+
+    if (age === "" || isNaN(age) || age <= 0 || age > 120) {
+      alert("Введите корректный возраст (от 1 до 120).");
+      continue;
+    }
+
+    const confirmed = confirm(`Вы уверены, что вам ${age}?`);
+    if (confirmed) {
+      break;
+    }
+  }
+
+  const word = getYearWord(Number(age));
+  result.textContent = `Возраст подтверждён: ${age} ${word}.`;
+  result.style.display = "block";
+}
+
+function getYearWord(age) {
+  const lastDigit = age % 10;
+  const lastTwoDigits = age % 100;
+
+  if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
+    return "лет";
+  }
+
+  switch (lastDigit) {
+    case 1:
+      return "год";
+    case 2:
+    case 3:
+    case 4:
+      return "года";
+    default:
+      return "лет";
+  }
+}
