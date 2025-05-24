@@ -151,3 +151,57 @@ function getYearWord(age) {
       return "лет";
   }
 }
+
+function submitSurvey() {
+  const surname = document.getElementById("surnameInput").value.trim();
+  const position = document.getElementById("positionInput").value.trim();
+  const age = document.getElementById("ageInput").value.trim();
+  const gender = document.getElementById("genderInput").value.trim();
+
+  if (!/^[А-Яа-яA-Za-z-]+$/.test(surname)) {
+    alert("Фамилия должна содержать только буквы.");
+    return;
+  }
+
+  const ageNumber = parseInt(age);
+  if (isNaN(ageNumber) || ageNumber < 0) {
+    alert("Возраст должен быть неотрицательным числом.");
+    return;
+  }
+
+  if (gender !== "М" && gender !== "Ж") {
+    alert("Пожалуйста, выберите пол (М или Ж).");
+    return;
+  }
+
+  document.getElementById("lastName").textContent = surname;
+  document.querySelector("header h2").textContent = position;
+
+  document.getElementById("complete-questionnaire").style.display = "none";
+  alert("Анкета успешно заполнена!");
+}
+
+function check() {
+  const skills = Array.from(document.querySelectorAll(".skill:checked")).map(
+    (el) => el.value
+  );
+  const education = document.getElementById("hasEducation").checked;
+  const result = document.getElementById("checkResult");
+
+  const hasMath = skills.includes("math");
+  const hasProg = skills.includes("programming");
+
+  if (hasMath && hasProg) {
+    result.textContent =
+      "✅ Достаточные навыки: математика и программирование.";
+    return;
+  }
+
+  if (education && skills.length >= 2) {
+    result.textContent =
+      "✅ Достаточные навыки: высшее образование и два других навыка.";
+    return;
+  }
+
+  result.textContent = "❌ Недостаточно навыков.";
+}

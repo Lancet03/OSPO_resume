@@ -8,11 +8,7 @@
   </head>
   <body>
     <header id="home">
-      <img
-        src="/assets/img/tenor.gif"
-        alt="Фото профиля"
-        class="profile-img"
-      />
+      <img src="/assets/img/tenor.gif" alt="Фото профиля" class="profile-img" />
       <h1>Иван <span id="lastName">Иванов</span></h1>
       <h2>Веб-разработчик</h2>
       <p>
@@ -20,14 +16,6 @@
         деталям.
       </p>
 
-      <!-- <input type="text" id="newLastName" placeholder="Введите новую фамилию" />
-      <button onclick="changeLastName()">Изменить фамилию</button>
-      <button onclick="changeBackgroundColor()">Случайный фон</button>
-
-      <button class="btn" onclick="scrollToSection('contact')">
-        Связаться со мной
-      </button>
-      <button class="btn" onclick="downloadResume()">Скачать резюме</button> -->
       <div class="header-controls">
         <div class="header-group">
           <input
@@ -117,6 +105,69 @@
         <p id="result3" class="project-result" style="display: none"></p>
       </div>
     </section>
+
+    <section>
+      <div id="survey">
+        <h2>Интерактивное резюме</h2>
+        <form id="surveyForm">
+          <label
+            >Фамилия: <input type="text" id="surnameInput" required
+          /></label>
+          <label
+            >Должность: <input type="text" id="positionInput" required
+          /></label>
+          <label>Возраст: <input type="number" id="ageInput" required /></label>
+          <label
+            >Пол:
+            <select id="genderInput" required>
+              <option value="">Выберите</option>
+              <option value="М">М</option>
+              <option value="Ж">Ж</option>
+            </select>
+          </label>
+
+          <fieldset>
+            <legend>Навыки</legend>
+            <label
+              ><input type="checkbox" class="skill" value="math" /> Знание
+              математики</label
+            >
+            <label
+              ><input type="checkbox" class="skill" value="programming" />
+              Знание программирования</label
+            >
+            <label
+              ><input type="checkbox" class="skill" value="design" /> Навыки
+              дизайна</label
+            >
+            <label
+              ><input type="checkbox" class="skill" value="management" />
+              Управление проектами</label
+            >
+          </fieldset>
+
+          <label class="checkbox-label"
+            ><input type="checkbox" id="hasEducation" /> Высшее
+            образование</label
+          >
+          <label
+            >Дополнительная информация:<br />
+            <textarea id="additionalText" rows="3"></textarea>
+          </label>
+
+          <button
+            type="button"
+            id="complete-questionnaire"
+            onclick="submitSurvey()"
+          >
+            Заполнить анкету
+          </button>
+          <button type="button" onclick="check()">Проверить навыки</button>
+          <p id="checkResult"></p>
+        </form>
+      </div>
+    </section>
+
     <section id="contact">
       <h2>Связаться со мной</h2>
       <form id="contactForm">
